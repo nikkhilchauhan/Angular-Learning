@@ -1,0 +1,16 @@
+<app-server></app-server>
+<hr />
+<div class="card">
+  <p class="lead text-center">Normal: {{ allowNewServer }}</p>
+  <p class="lead text-center" [innerText]="allowNewServer"></p>
+  <button [disabled]="!allowNewServer" class="btn btn-primary">
+    Button
+  </button>
+</div>
+<hr />
+<div class="card">
+  <button (click)="onCreateServer()" class="btn btn-primary">
+    Create Server
+  </button>
+  <p class="lead text-center">{{ serverCreationStatus }}</p>
+</div>
